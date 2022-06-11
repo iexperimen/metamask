@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SendTransactions | iExperiment</title>
+        <link rel="shortcut icon" href="https://iexperimen.github.io/assets/icon/icon.png" />
+        <link rel="icon" href="https://iexperimen.github.io/assets/icon/icon.png" type="image/jpg">
+        <meta name="og:image" property="og:image" content="https://iexperimen.github.io/assets/icon/icon.png">
+        <meta name="og:image:type" property="og:image:type" content="image/jpeg">
+        <meta name="og:image:width" property="og:image:width" content="200">
+        <meta name="og:image:height" property="og:image:height" content="200">
+        <meta name="og:title" property="og:title" content="SendTransactions | iExperiment">
+        <meta name="description" content="This is a collection of images created by iexperiment, the purpose of these images is to build a puzzle game system that can be used for passwords.">
+        <meta name="keywords" content="metamask, cronos, binance, cro, bnb, mmf, pancakeswap, crypto, eth, ethereum, btc, iexperiment, iexperimen, icollector, icollection, ropsten, rinkeby, binance, eth faucet, eth balance, ropsten faucet, ropsten balance, rinkeby balance, rinkeby faucet, bsc balance, bsc faucet, faucet, balance">
+        <meta name="author" content="iexperiment">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XSKYKT695"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-7XSKYKT695');
+        </script>
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+                font-family: "Courier New", Courier, monospace;
+            }
+            .huks {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background: #dddddd5f;
+                overflow: hidden;
+                box-sizing: border-box;
+            }
+            .bgimg1 {
+                height: 100%;
+            }
+
+            p {
+                padding: 0px;
+                margin: 0px;
+            }
+            
+            .middle1 {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+            }
+            
+            .box-cuard {
+              width: 300px;
+              height: auto;
+              border-radius: 20px;
+              padding: 20px;
+              background: white;
+              align-items: center;
+              box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2)
+            }
+            
+            #logo-container svg {
+              width: 250px;
+              height: auto;
+            }
+            
+            .faucet_auth {
+                padding: 8px 16px;
+                width: 285px;
+                border: 1px solid gray;
+                background-color: whitesmoke;
+                border-radius: 20px;
+                margin-bottom: 8px;
+                color: black;
+                font-style: bold;
+                cursor: pointer;
+                font-size: 18px;
+                font-family: "Courier New", Courier, monospace;
+                transition-duration: 0.4s;
+            }
+
+            .faucet_auth:hover {
+                background: black;
+                color: whitesmoke;
+            }
+            
+            .faucet_button {
+                padding: 8px 16px;
+                width: 285px;
+                border: 1px solid gray;
+                background-color: black;
+                background-image: linear-gradient(to bottom right, red, yellow);
+                border-radius: 20px;
+                margin-bottom: 8px;
+                color: white;
+                font-style: bold;
+                cursor: pointer;
+                font-size: 18px;
+                font-family: "Courier New", Courier, monospace;
+                transition-duration: 0.4s;
+            }
+            
+            .faucet_button:hover {
+                background-image: linear-gradient(to bottom right, yellow, red);
+            }
+
+            #scs {
+                width: 150px;
+                padding: 16px;
+                overflow: auto;
+            }
+            
+            @media only screen and (max-width: 768px) {
+              #logo-container svg {
+                width: 150px;
+                height: auto;
+              }
+             .box-cuard {width: 90%;}
+            }
+            
+            #paid_me {
+                position: fixed;
+                top: -2px;
+                right: -60px;
+                width: 100px;
+                background-image: linear-gradient(to bottom right, yellow, red);
+                padding: 15px 50px;
+                -ms-transform: rotate(40deg);
+                transform: rotate(40deg);
+                text-align: center;
+                color: white;
+                font-size: 20px;
+                text-shadow: 1px 1px #000, -1px 1px #000, 1px -1px #000, -1px -1px #000,1px  1px 5px #555;
+                animation: blinking 2s infinite;
+                cursor: pointer;
+            }
+            
+            @keyframes blinking{
+                0%{  color: white; }
+                47%{  color: #ffdebb; }
+                62%{  color: #ffbb73; }
+                97%{  color: #fb9932; }
+                100%{ color: #fb8402;  }
+            }
+            
+            a {
+                display: none;
+                text-decoration: none;
+            }
+            .disclaimer {
+                display: none;
+            }
+        </style>
+    </head>
+    <body id="myCopyright">
+        <div class="huks" id="iexp_identy_meta">
+            <div class="bgimg1">
+              <div id="paid_me" onclick="paidNow()"><b>PAID<br>WIDGETS</b></div>
+              <div class="middle1">
+                <div class="box-cuard" align="center">
+                    <div id="logo-container"></div>
+                    <h3>MetaMask</h3>
+                    <button class="faucet_auth enableEthereumButton">Auth</button>
+                    <h3>Send</h3>
+                    <button class="faucet_button sendEthButton">1 ETH</button>
+                    <p id="scs"></p>
+                    <p style="font-size: 14px;">
+                        Widget by <a title="iExperimen" alt="iExperimen" href="https://iexperimen.github.io" style="display:inline-block;color:black;"><b>@iExperimen</b></a>
+                    </p>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="https://iexperimen.github.io/metamask/send/js/token_0x9754c41dED883A654F2190C89ACf3eC1eD84199C_sendme.js"></script>
+        <script type="text/javascript" src="https://iexperimen.github.io/balance/js/token_0x9754c41dED883A654F2190C89ACf3eC1eD84199C_faucet_balance.js"></script>
+    
+    </body>
+</html>
